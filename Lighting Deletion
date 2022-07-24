@@ -1,0 +1,6 @@
+sethiddenproperty(game:GetService("Workspace").Terrain, "Decoration", true)
+sethiddenproperty(game:GetService("Lighting"), "Technology", "Future")
+local light = game.Lighting
+for i, v in pairs(light:GetChildren()) do
+	v:Destroy()
+end
