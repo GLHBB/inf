@@ -1,25 +1,2 @@
---//inf lvls\\--
-
-game.StarterGui:SetCore("SendNotification", {
-Title = "BH - slash1"; -- the title (ofc)
-Text = "You have 20 seconds to hit any NPC for this to work."; -- what the text says (ofc)
-Icon = "rbxassetid://7395607425"; 
-Duration = 20000;
-})
-wait(20)
-
- local CFrameEnd = CFrame.new(167.538696, 2.94950795, 18.4798183, 0.892175734, 3.98570918e-08, 0.451688409, -2.87137709e-08, 1, -3.15247455e-08, -0.451688409, 1.51559352e-08, 0.892175734)
- local Time = 10
- local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
- tween:Play()
- tween.Completed:Wait()
- wait(11)
- 
- local CFrameEnd = CFrame.new(162.013046, 4.37969923, 93.0577621, 0.999986231, -0.00228079408, 0.00470611453, 0.00168385915, 0.992386281, 0.123153001, -0.00495120883, -0.123143405, 0.992376566) -- Place your coords in here
- local Time = 11
- local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
- tween:Play()
- tween.Completed:Wait()
- wait(1)
-
-game:GetService("Players").LocalPlayer:Kick("You were kicked from this experience: You were kicked and will possibly be banned because you tried to hack levels.")
+coming tmr
+5PM BST
