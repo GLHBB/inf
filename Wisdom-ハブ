@@ -1,6 +1,6 @@
 if game.PlaceId == 6152116144  then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-  local Window = Library.CreateLib("                                            Wisdom-ハブ", "BloodTheme")
+  local Window = Library.CreateLib("                                            Wisdom-ハブ", "Synapse")
  
     -- MAIN
     local Main = Window:NewTab("Main")
@@ -8,7 +8,7 @@ if game.PlaceId == 6152116144  then
      MainSection:NewButton("Starter Village", "TPs To Starter Village", function()
     local teleport_table = {
         location1 = Vector3.new(122.5360107421875, 282.2076416015625, -1626.99169921875),
-        location2 = Vector3.new()  -- your desired position
+        location2 = Vector3.new()
     }
     local tween_s = game:GetService('TweenService')
     local tweeninfo = TweenInfo.new(8,Enum.EasingStyle.Linear)
