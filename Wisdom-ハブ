@@ -1,6 +1,6 @@
 if game.PlaceId == 6152116144  then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-  local Window = Library.CreateLib("                                            Wisdom-ハブ", "Synapse")
+  local Window = Library.CreateLib("                                            Wisdom-ハブ", "BloodTheme")
  
     -- MAIN
     local Main = Window:NewTab("Main")
