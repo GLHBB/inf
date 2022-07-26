@@ -1,5 +1,6 @@
 --[[
 
+Wisdom-ハブ
 made by slash1 and yui
 https://discord.gg/K7sT9hmUzn
 
@@ -33,7 +34,7 @@ https://discord.gg/K7sT9hmUzn
 if game.PlaceId == 6152116144 then
 local UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/twink"))()
 
-local MainUI = UILibrary.Load("       Wisdom Hub")
+local MainUI = UILibrary.Load("       Wisdom-ハブ")
 local FirstPage = MainUI.AddPage("Home")
 
 local SecondPage = MainUI.AddPage("AutoFarm")
