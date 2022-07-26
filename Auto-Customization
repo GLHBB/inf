@@ -1,7 +1,7 @@
-
+LocalPlayer = SpencerConfidentiaI
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Skin_Color.B,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Skin_Color.B,
     [3] = 0.27450981736183167
 }
 
@@ -10,7 +10,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Skin_Color.G,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Skin_Color.G,
     [3] = 0.3607843220233917
 }
 
@@ -19,7 +19,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Skin_Color.R,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Skin_Color.R,
     [3] = 0.48627451062202454
 }
 
@@ -28,7 +28,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Face.Extra2,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Face.Extra2,
     [3] = 0
 }
 
@@ -37,7 +37,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Face.Extra,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Face.Extra,
     [3] = 0
 }
 
@@ -46,7 +46,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Face.Mouth,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Face.Mouth,
     [3] = 3
 }
 
@@ -55,7 +55,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Face.Nose,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Face.Nose,
     [3] = 17
 }
 
@@ -64,7 +64,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Face.Eyes,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Face.Eyes,
     [3] = 38
 }
 
@@ -73,7 +73,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Body_Scaling.Depth,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Body_Scaling.Depth,
     [3] = 0
 }
 
@@ -82,7 +82,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Body_Scaling.Height,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Body_Scaling.Height,
     [3] = 0
 }
 
@@ -91,7 +91,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Body_Scaling.Width,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Body_Scaling.Width,
     [3] = 0
 }
 
@@ -100,7 +100,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Clothes.Shirt.Index,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Clothes.Shirt.Index,
     [3] = 34
 }
 
@@ -109,7 +109,7 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Clothes.Pants.Index,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Clothes.Pants.Index,
     [3] = 22
 }
 
@@ -118,7 +118,52 @@ wait(0.001)
 
 local args = {
     [1] = "Change_Value",
-    [2] = game:GetService("ReplicatedStorage").Player_Data.pux1ssy.Customization.Hairs.Hair1.Index,
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Hairs.Hair2.Index,
+    [3] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait(0.001)
+
+local args = {
+    [1] = "Change_Value",
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Body_Scaling.Height,
+    [3] = 6
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait(0.001)
+
+local args = {
+    [1] = "Change_Value",
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Body_Scaling.Width,
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait(0.001)
+
+local args = {
+    [1] = "Change_Value",
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Shoes.Index,
+    [3] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait(0.001)
+
+local args = {
+    [1] = "Change_Value",
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Hairs.Beard.Index,
+    [3] = 0
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait(0.001)
+
+local args = {
+    [1] = "Change_Value",
+    [2] = game:GetService("ReplicatedStorage").Player_Data.SpencerConfidentiaI.Customization.Hairs.Hair1.Index,
     [3] = 3
 }
 
