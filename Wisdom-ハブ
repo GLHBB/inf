@@ -77,7 +77,7 @@ Index = hookmetamethod(game, '__index', function(self, key)
    
    return Index(self, key)
 end)
-     
+end)
 local FifthPage = MainUI.AddPage("Misc")
 
 local SixthPage = MainUI.AddPage("Settings")
