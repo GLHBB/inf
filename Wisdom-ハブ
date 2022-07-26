@@ -48,7 +48,7 @@ local ThirdPage = MainUI.AddPage("Tps")
     location2 = Vector3.new(2989.108642578125, 316.00054931640625, -3876.990966796875)  -- your desired position
 }
 local tween_s = game:GetService('TweenService')
-local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+local tweeninfo = TweenInfo.new(10,Enum.EasingStyle.Linear)
 
 local lp = game.Players.LocalPlayer
 
@@ -71,7 +71,7 @@ local Index
 Index = hookmetamethod(game, '__index', function(self, key)
    
    if key == 'WalkSpeed' then
-       self.WalkSpeed = 255 --v?
+       self.WalkSpeed = 255
        return 16
    end
    
