@@ -1,13 +1,17 @@
+--[[
+made by 在我們之間#0091
+--]]
+
 shared.Enable = false
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
-Name = "Wisdom - Farming made by 在我們之間#0091 ",
+Name = "Farming",
 Icon = "",
 PremiumOnly = false
 })
 local Section = Tab:AddSection({
-Name = "General"
+Name = "auto-farm"
 })
 Tab:AddToggle({
 Name = "Enable",
