@@ -1,21 +1,3 @@
---[[
- Dungeon List.
- _dungeonLeafRush - Leaf Village Defenders.
- _dungeonSaibamanInvasion - Saiyan Invasion.
-_dungeonWindmillAssault - Windmill Village Assault!
-_dungeonMHACityRush - City Rush!
---]]
-
-
-local args = {
-    [1] = {
-        ["MissionID"] = "_dungeonMHACityRush", --change to dungeon
-        ["Difficulty"] = "Medium"
-    }
-}
-
-game:GetService("ReplicatedStorage")._NETWORK:FindFirstChild("{25833D3C-E303-4BBB-A76B-C81D7C57A161}"):FireServer(unpack(args))
-
 
 --[[
 made by 在我們之間#0091
