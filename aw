@@ -59,7 +59,6 @@ function getNPC()
                                local d = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - partSkill:FindFirstChildOfClass("MeshPart").Position).Magnitude
                                if d < 50 then
                                    print("Touching Area")
-                                   setclipboard(tostring(partSkill:FindFirstChildOfClass("MeshPart").BrickColor))
                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,80,200)
                                    task.wait(2)
                                end
@@ -103,9 +102,10 @@ end)
 })
 
 OrionLib:MakeNotification({
-	Name = "made by 在我們之間#0091",
-	Content = "made by 在我們之間#0091",
-	Image = "rbxassetid://4483345998",
+	Name = "Info.",
+	Content = "made by 在我們之間#0091 Copied discord link to clipboard",
+	Image = "rbxassetid://1510063224",
 	Time = 1999999999
 })
+setclipboard(https://discord.gg/5sDc7TV2jH)
 
