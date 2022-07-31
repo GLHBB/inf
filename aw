@@ -1,4 +1,3 @@
-
 --[[
 made by 在我們之間#0091
 --]]
@@ -101,11 +100,17 @@ end)
   	end    
 })
 
+Tab:AddButton({
+	Name = "discord link - copy button",
+	Callback = function()
+      		setclipboard("https://discord.gg/5sDc7TV2jH")
+  	end    
+})
+
 OrionLib:MakeNotification({
 	Name = "Info.",
-	Content = "made by 在我們之間#0091 Copied discord link to clipboard",
+	Content = "made by 在我們之間#0091",
 	Image = "rbxassetid://1510063224",
 	Time = 1999999999
 })
-setclipboard(https://discord.gg/5sDc7TV2jH)
 
