@@ -1,0 +1,184 @@
+ Config = {
+    WindowName = "1.0",
+    Color = Color3.fromRGB(182,41,243),
+    Keybind = Enum.KeyCode.RightBracket
+}
+
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexR32/Roblox/main/BracketV3.lua"))()
+local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
+
+local Tab1 = Window:CreateTab("Anime Warriors - 在我們之間#0091")
+
+
+local Section1 = Tab1:CreateSection("")
+local Section2 = Tab1:CreateSection("")
+
+local RunService = game:GetService("RunService")
+local player = game.Players.LocalPlayer
+local hum = player.Character.HumanoidRootPart
+local mouse = player:GetMouse() 
+local tpservice= game:GetService("TeleportService")
+local VirtualUser= game:service'VirtualUser'
+
+local AutoFarm
+
+local Map = ""
+local Difficulty = ""
+local Roll = ""
+local Roll_Amout = 1
+
+-- Credits To Charwar for Server Hop
+local PlaceID = game.PlaceId
+local AllIDs = {}
+local foundAnything = ""
+local actualHour = os.date("!*t").hour
+local Deleted = false
+
+
+function getSkill_remote()
+   for i,v in pairs(game:GetService("ReplicatedStorage")["_NETWORK"]:GetChildren()) do
+       if i == 69 then
+           return v
+       end
+   end
+end
+function useSkill(mobPos)
+   local info = {
+   ["Character"] = game.Players.LocalPlayer.Character,
+   ["mouseHit"] = mobPos
+   }
+   for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameUI.HUD.Skills:GetChildren()) do
+       if v:IsA("ImageButton") then
+           local remote = getSkill_remote()
+           remote:InvokeServer(v.Name,info)  
+       end
+   end
+   return skills
+end
+
+Section1:CreateLabel("Features")
+
+local Dropdown1 = Section1:CreateDropdown("Map", {"LeafRush","SaibamanInvasion","WindmillAssault", "MHACityRush"}, function(String)
+    Map = "_dungeon"..String
+end)
+
+local Dropdown2 = Section1:CreateDropdown("Gamemode", {"Easy","Medium", "Hard", "OverKill"}, function(String)
+    Difficulty = String
+end)
+
+local Button1 = Section1:CreateButton("Create Room", function()
+    local args = {
+        [1] = {
+            ["MissionID"] = Map,
+            ["Difficulty"] = Difficulty
+        }
+    }
+    
+    game:GetService("ReplicatedStorage")._NETWORK.CreateRoom:FireServer(unpack(args))
+end)
+
+local Button2 = Section1:CreateButton("Start Room", function()
+    game:GetService("ReplicatedStorage")._NETWORK.StartRoomGame:FireServer()
+end)
+
+local Toggle1 = Section1:CreateToggle("Autofarm", nil, function(State)
+    shared.toggle = State
+     if shared.toggle then
+    AutoFarm = RunService.Stepped:Connect(function()
+       pcall(function()
+       for i,v in pairs(game:GetService("Workspace").Live.NPCs:GetChildren()) do
+           if v.HumanoidRootPart.Anchored == false then
+               local mag = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude
+               if mag < 1500 then
+                   repeat
+                       for _,partSkill in pairs(game:GetService("Workspace").Effects:GetChildren()) do
+                           if partSkill:IsA("Model") and string.find(tostring(partSkill.Name),"indicator") then
+                               
+                               local indicatorArea = partSkill
+                               local d = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - partSkill:FindFirstChildOfClass("MeshPart").Position).Magnitude
+                               if d < 50 then
+                                   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,80,200)
+                                   task.wait(2)
+                               end
+                           end
+                       end
+                       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 5)
+                       game:GetService("Players").LocalPlayer.ClientInputEvents.M1:Fire()
+                       useSkill(v.HumanoidRootPart.CFrame)
+                       task.wait()
+                   until (v.Humanoid.Health <= 0) or (not shared.toggle)
+               end
+           end
+       end
+   end)
+    end)
+    else
+        AutoFarm:Disconnect()
+    end
+end)
+
+local Dropdown3 = Section1:CreateDropdown("Roll", {"_bannerMashup"}, function(String)
+    Roll = String
+end)
+
+local Dropdown4 = Section1:CreateDropdown("Amout", {1,2,3,4,5}, function(String)
+    Roll_Amout = String
+end)
+
+local Button3 = Section1:CreateButton("Summon", function()
+   local args = {
+    [1] = {
+        ["Banner"] = Roll,
+        ["Quantity"] = tonumber(Roll_Amout)
+    }
+}
+
+game:GetService("ReplicatedStorage")._NETWORK.Summon:InvokeServer(unpack(args))
+ 
+end)
+
+local Button4 = Section1:CreateButton("Abyss", function()
+local args = {
+    [1] = "_abyssCCBattleDungeon"
+}
+
+game:GetService("ReplicatedStorage")._NETWORK.UpdateSelectedAbyssID:FireServer(unpack(args))
+
+end)
+
+
+local Button5 = Section1:CreateButton("Create Abyss", function()
+local args = {
+    [1] = {
+        ["abyssID"] = "_abyssCCBattleDungeon",
+        ["partyType"] = "Abyss"
+    }
+}
+
+game:GetService("ReplicatedStorage")._NETWORK.CreateParty:InvokeServer(unpack(args))
+end)
+
+local Button6 = Section1:CreateButton("Start Abyss", function()
+game:GetService("ReplicatedStorage")._NETWORK.StartAbyssGame:FireServer()
+end)
+
+
+Section2:CreateLabel("Misc")
+Section2:CreateLabel("Autofarm : 在我們之間#0091")
+
+local Button8 = Section2:CreateButton("Instant ProximityPrompt", function()
+game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(prompt)
+   prompt.HoldDuration = 0
+end)
+end) 
+
+
+local Toggle7 = Section2:CreateToggle("UI Toggle", nil, function(State)
+    Window:Toggle(State)
+end)
+
+Toggle7:CreateKeybind(tostring(Config.Keybind):gsub("Enum.KeyCode.", ""), function(Key)
+    Config.Keybind = Enum.KeyCode[Key]
+end)    
