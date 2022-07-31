@@ -105,6 +105,6 @@ OrionLib:MakeNotification({
 	Name = "made by 在我們之間#0091",
 	Content = "made by 在我們之間#0091",
 	Image = "rbxassetid://4483345998",
-	Time = 5
+	Time = 1999999999
 })
 
