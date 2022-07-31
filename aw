@@ -1,22 +1,6 @@
 --[[
 made by 在我們之間#0091
 --]]
-
-shared.Enable = false
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-local Tab = Window:MakeTab({
-Name = "Farming",
-Icon = "",
-PremiumOnly = false
-})
-local Section = Tab:AddSection({
-Name = "auto-farm"
-})
-Tab:AddToggle({
-Name = "Enable",
-Default = false,
-Callback = function(Value)
 if Value then
            shared.Enable = true
        else
@@ -81,6 +65,11 @@ task.spawn(function()
        task.wait()
    end
 end)
+
+wait()
+shared.Enable = false
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
 	Name = "Misc.",
