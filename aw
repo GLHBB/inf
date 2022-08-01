@@ -107,6 +107,33 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Abyss - Go in lobby",
+	Callback = function()
+      		
+local args = {
+    [1] = "_abyssCCBattleDungeon"
+}
+
+game:GetService("ReplicatedStorage")._NETWORK.UpdateSelectedAbyssID:FireServer(unpack(args))
+wait()
+
+local args = {
+    [1] = {
+        ["abyssID"] = "_abyssCCBattleDungeon",
+        ["partyType"] = "Abyss"
+    }
+}
+
+game:GetService("ReplicatedStorage")._NETWORK.CreateParty:InvokeServer(unpack(args))
+wait()
+
+
+game:GetService("ReplicatedStorage")._NETWORK.StartAbyssGame:FireServer()
+
+  	end    
+})
+
 OrionLib:MakeNotification({
 	Name = "Info.",
 	Content = "made by 在我們之間#0091",
