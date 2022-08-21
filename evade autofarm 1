@@ -1,0 +1,13 @@
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+
+wait(0.01)
+
+local CFrameEnd = CFrame.new(1528.42932, -191.031494, -528.95752, 0.000481758267, -0.60383296, -0.797110796, -0.0263254233, 0.796826959, -0.603633881, 0.99965328, 0.0212750733, -0.0155122727) -- Place your coords in here
+local Time = 0.5 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+tween.Completed:Wait()
+
+wait(0.01)
+  
+game:GetService("ReplicatedStorage").Events.Respawn:FireServer()
