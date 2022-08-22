@@ -2,6 +2,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GLHBB/inf/main/spy%20
 
 wait(0.00000001)
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Evade/main.lua"))()
+
+wait(0.00000001)
+
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
