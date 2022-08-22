@@ -5,7 +5,7 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
-wait(0.00000000000001)
+wait()
 
 game.StarterGui:SetCore("SendNotification", {
 Title = "epic evade skript"; -- the title (ofc)
@@ -14,16 +14,16 @@ Icon = "rbxassetid://8574020526";
 Duration = 3.5;
 })
 
-wait(0.00000000000001)
+wait()
 
 game.StarterGui:SetCore("SendNotification", {
 Title = "hamsta"; -- the title (ofc)
-Text = "evade gui was made by babyhamsta on v3rm"; )
+Text = "evade gui was made by babyhamsta on v3rm";
 Icon = "rbxassetid://8574020526";
 Duration = 3.5; 
 })
 
-wait(0.00000000000001)
+wait()
 
 game.StarterGui:SetCore("SendNotification", {
 Title = "epic evade skript"; -- the title (ofc)
@@ -32,7 +32,7 @@ Icon = "rbxassetid://8574020526";
 Duration = 3.5;
 })
 
-wait(0.00000000000001)
+wait()
 
 game.StarterGui:SetCore("SendNotification", {
 Title = "epic evade skript"; -- the title (ofc)
