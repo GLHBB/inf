@@ -1,0 +1,64 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GLHBB/inf/main/spy%20chat%20script"))()
+
+wait(0.00000001)
+
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+wait(0.00000000000001)
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "epic evade skript"; -- the title (ofc)
+Text = "made by spence // suphiRBLXsuphi on v3rm";
+Icon = "rbxassetid://8574020526"; 
+Duration = 3.5;
+})
+
+wait(0.00000000000001)
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "hamsta"; -- the title (ofc)
+Text = "evade gui was made by babyhamsta on v3rm"; )
+Icon = "rbxassetid://8574020526";
+Duration = 3.5; 
+})
+
+wait(0.00000000000001)
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "epic evade skript"; -- the title (ofc)
+Text = "use god mode with the autofarm";
+Icon = "rbxassetid://8574020526"; 
+Duration = 3.5;
+})
+
+wait(0.00000000000001)
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "epic evade skript"; -- the title (ofc)
+Text = "irreversible , you have to leave the game to stop it!";
+Icon = "rbxassetid://8574020526"; 
+Duration = 3.5;
+})
+
+wait(0.00000000000001)
+
+while true do
+
+    wait(4.84) 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+
+    wait(0.33)
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GLHBB/inf/main/teleport.constant.evade"))()
+
+
+end
+
+wait(139.9)
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GLHBB/inf/main/evade%20respawn%20remote"))()
