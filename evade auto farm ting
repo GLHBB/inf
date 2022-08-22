@@ -2,7 +2,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GLHBB/inf/main/spy%20
 
 wait(0.00000001)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Evade/main.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GLHBB/inf/main/hamsta%20script%20evade"))()
 
 wait(0.00000001)
 
